@@ -1,13 +1,13 @@
-#ClusterMonitor
+# ClusterMonitor
 
 Arduino-based monitor for racks/clusters, exposing Prometheus-compatible metrics and acting as a Modbus TCP slave as well.
 
-##Supported metrics
+## Supported metrics
 
 1. Temperature & relative humidity, based on DHT22 (AM2302)
 2. DC current, based on ACS712
 
-##Supported protocols
+## Supported protocols
 
 1. Modbus TCP - available on port 502, exposes the following `16-bit Holding Registers`:
     1. offset 0 - temperature * 100
@@ -23,7 +23,7 @@ Arduino-based monitor for racks/clusters, exposing Prometheus-compatible metrics
         cluster_rack_current{bus="5v"} 0.22
         cluster_rack_current{bus="12v"} 1.25
         ```
-##Device ID
+## Device ID
 Hardcoded MAC address is `90:A2:DA:00:51:06`, which can be changed according to your needs on line 40:
 ```cpp
 uint8_t mac[] = { 0x90, 0xA2, 0xDA, 0x00, 0x51, 0x06 };
